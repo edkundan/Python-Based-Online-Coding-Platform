@@ -3,8 +3,6 @@ JDK Setup (for Java-based integration):
 
 Download and install the latest Java Development Kit (JDK) from Oracle or use OpenJDK (sudo apt install openjdk-17-jdk for Linux).
 Verify installation:
-bash
-Copy code
 java -version
 javac -version
 Python Setup:
@@ -12,8 +10,6 @@ Python Setup:
 Install Python 3.10+ from Python.org.
 Install pip for package management (sudo apt install python3-pip for Linux).
 Verify installation:
-bash
-Copy code
 python --version
 pip --version
 IDK Setup:
