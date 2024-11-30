@@ -1,47 +1,21 @@
-Python-Based-Online-Coding-Platform/
+python-based-online-coding-platform/
 │
-├── src/                     # Source code of the project
-│   ├── main/                # Main application source
-│   │   ├── java/            # Java backend logic
-│   │   │   ├── com/         # Java package structure
-│   │   │   │   ├── platform/
-│   │   │   │   │   ├── PythonPlatformApplication.java  # Main Spring Boot class
-│   │   │   │   │   ├── config/
-│   │   │   │   │   │   └── AppConfig.java             # Configuration files (CORS, beans)
-│   │   │   │   │   ├── controllers/
-│   │   │   │   │   │   ├── CodeExecutionController.java  # REST API for executing Python
-│   │   │   │   │   │   └── UserController.java           # User authentication APIs
-│   │   │   │   │   ├── models/
-│   │   │   │   │   │   ├── User.java                   # User entity for database
-│   │   │   │   │   │   └── ExecutionResult.java        # Result model for Python code
-│   │   │   │   │   ├── services/
-│   │   │   │   │   │   ├── CodeExecutionService.java   # Python code execution logic
-│   │   │   │   │   │   ├── UserService.java            # Business logic for user management
-│   │   │   │   │   │   └── PythonIntegrationService.java  # Python-Java integration logic
-│   │   │   │   │   └── repositories/
-│   │   │   │   │       └── UserRepository.java         # Spring JPA repository for users
-│   │   └── resources/       # Resources like HTML templates and properties
-│   │       ├── templates/   # HTML templates (Thymeleaf) for the UI
-│   │       │   ├── base.html      # Base template
-│   │       │   ├── index.html     # Homepage
-│   │       │   └── editor.html    # Code editor page
-│   │       ├── static/       # Static assets (CSS, JS, images)
-│   │       │   ├── css/
-│   │       │   ├── js/
-│   │       │   └── img/
-│   │       └── application.properties  # Spring Boot configuration
+├── src/
+│   ├── Main.java                    # Main entry point of the application
+│   ├── DBConnection.java            # Class for establishing DB connection
+│   ├── UserDAO.java                 # Data Access Object for users
+│   ├── CodeExecutionDAO.java        # Data Access Object for code executions
+│   ├── ChallengeDAO.java            # Data Access Object for challenges
+│   ├── SubmissionDAO.java           # Data Access Object for submissions
 │
-├── test/                    # Unit and integration tests
-│   ├── java/                # Java-based test cases
-│   │   └── com/
-│   │       └── platform/
-│   │           ├── CodeExecutionControllerTest.java  # Test for the code execution API
-│   │           ├── UserControllerTest.java           # Test for user APIs
-│   │           └── PythonIntegrationServiceTest.java # Test for Python integration
+├── lib/                             # Libraries (e.g., MySQL JDBC driver)
+│   └── mysql-connector-java-8.0.29.jar # MySQL connector for JDBC
 │
-├── pom.xml                  # Maven dependencies
-├── Dockerfile               # Dockerfile for containerization
-├── docker-compose.yml       # Docker Compose for multi-service deployments
-├── .gitignore               # Git ignore file
-├── README.md                # Documentation
-└── LICENSE                  # License file
+├── config/                          # Configuration files (DB config, etc.)
+│   └── db.properties                # Database connection properties
+│
+├── bin/                             # Compiled .class files
+│
+├── README.md                        # Project description and instructions
+├── setup.sh                         # Shell script for setting up the project (optional)
+└── .gitignore                       # Git ignore file
