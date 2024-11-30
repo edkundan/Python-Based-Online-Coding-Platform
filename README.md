@@ -40,7 +40,7 @@ A full-stack coding platform built with **Java Spring Boot** for the backend and
 ### **Setup Steps**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/Python-Based-Online-Coding-Platform.git
+   git clone https://github.com/edkundan/Python-Based-Online-Coding-Platform.git
    cd Python-Based-Online-Coding-Platform
    ```
 
@@ -67,39 +67,28 @@ A full-stack coding platform built with **Java Spring Boot** for the backend and
 ## **Project Structure**
 
 ```
-Python-Based-Online-Coding-Platform/
+python-based-online-coding-platform/
 │
-├── src/main/java/com/platform/
-│   ├── PythonPlatformApplication.java    # Main Spring Boot Application
-│   ├── config/
-│   │   └── AppConfig.java                # Configuration (e.g., CORS, Beans)
-│   ├── controllers/
-│   │   ├── CodeExecutionController.java  # Code Execution REST API
-│   │   └── UserController.java           # User Authentication APIs
-│   ├── models/
-│   │   ├── User.java                     # User entity
-│   │   └── ExecutionResult.java          # Code execution result model
-│   ├── services/
-│   │   ├── CodeExecutionService.java     # Python execution logic
-│   │   ├── UserService.java              # User management logic
-│   │   └── PythonIntegrationService.java # Java-Python integration
-│   ├── repositories/
-│   │   └── UserRepository.java           # User database access
+├── src/
+│   ├── Main.java                    # Main entry point of the application
+│   ├── DBConnection.java            # Class for establishing DB connection
+│   ├── UserDAO.java                 # Data Access Object for users
+│   ├── CodeExecutionDAO.java        # Data Access Object for code executions
+│   ├── ChallengeDAO.java            # Data Access Object for challenges
+│   ├── SubmissionDAO.java           # Data Access Object for submissions
 │
-├── src/main/resources/
-│   ├── templates/                        # Thymeleaf templates (HTML files)
-│   │   ├── base.html
-│   │   ├── index.html
-│   │   └── editor.html
-│   ├── static/                           # CSS, JS, and images
-│   └── application.properties            # Spring Boot configuration
+├── lib/                             # Libraries (e.g., MySQL JDBC driver)
+│   └── mysql-connector-java-8.0.29.jar # MySQL connector for JDBC
 │
-├── src/test/java/com/platform/           # Unit tests
+├── config/                          # Configuration files (DB config, etc.)
+│   └── db.properties                # Database connection properties
 │
-├── pom.xml                               # Maven dependencies
-├── Dockerfile                            # Docker containerization file
-├── README.md                             # Project documentation
-└── LICENSE                               # License file
+├── bin/                             # Compiled .class files
+│
+├── README.md                        # Project description and instructions
+├── setup.sh                         # Shell script for setting up the project (optional)
+└── .gitignore                       # Git ignore file
+                              # License file
 ```
 
 ---
