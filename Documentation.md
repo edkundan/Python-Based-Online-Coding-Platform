@@ -39,7 +39,7 @@ Clone the Repository:
 
 bash
 Copy code
-git clone https://github.com/username/python-online-learning-platform.git
+git clone https://github.com/edkundan/Python-Based-Online-Coding-Platform
 Setup MySQL Database:
 
 Create a new database for the project in MySQL:
